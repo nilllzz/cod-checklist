@@ -23,7 +23,7 @@ export default class WeaponBox extends React.Component<IWeaponBoxProps, any> {
                     <IWButton width={300} text={this.props.weapon.name} />
                 </Link>
                 <img className='weapon-box-img' src={this.props.weapon.img} />
-                <ProgressBar width={300} value={this.props.weapon.getCompletion()} />
+                <ProgressBar value={this.props.weapon.getCompletion()} />
             </div>
         );
     }

@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import HomePage from "./components/pages/home";
 import WeaponsPage from "./components/pages/weapons/weapons";
 import WeaponDetailPage from "./components/pages/weaponDetail/weaponDetail";
+import WeaponClassPage from "./components/pages/weaponClass/weaponClass";
 
 export default class PageRouter extends React.Component {
 
@@ -17,6 +18,7 @@ export default class PageRouter extends React.Component {
                         <Route path='/weapons'>
                             <Switch>
                                 <Route path='/weapons' exact component={WeaponsPage} />
+                                <Route path='/weapons/:weaponclass' exact component={WeaponClassPage} />
                                 <Route path='/weapons/:weaponclass/:weapon' exact component={WeaponDetailPage} />
                             </Switch>
                         </Route>

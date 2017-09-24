@@ -7,9 +7,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .weapon-box-img {
-    width: 80%;
+    max-width: 80%;
+    max-height: 62%;
+    margin-bottom:4px;
+    margin-top: 4px;
+    filter: drop-shadow(0 0 3px rgb(20, 20, 20)); 
 }

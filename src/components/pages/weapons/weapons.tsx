@@ -3,6 +3,7 @@ import IWLogo from "../../iw_logo";
 import TotalCompletion from "./totalCompletion";
 import WeaponClassSelection from "./weaponClassSelection";
 import NextCompletion from "./nextCompletion";
+import User from "../../../user";
 
 export default class WeaponsPage extends React.Component<any, any> {
 
@@ -15,7 +16,7 @@ export default class WeaponsPage extends React.Component<any, any> {
 
                     <div className='weapons-content-main'>
                         <div className='weapons-content-main--left'>
-                            <TotalCompletion />
+                            <TotalCompletion text={'Your overall completion progress'} progress={User.getCompletion()} />
                             <WeaponClassSelection />
                         </div>
                         <div className='weapons-content-main--right'>

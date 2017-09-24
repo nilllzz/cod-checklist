@@ -1,22 +1,20 @@
 import * as React from "react";
 
 interface IProgressBarProps {
-
     value: number;
-    width?: number;
-
+    height?: number;
 }
 
 export default class ProgressBar extends React.Component<IProgressBarProps, any> {
 
     public static defaultProps: Partial<IProgressBarProps> = {
-        width: 200
+        height: 28
     };
 
     public render() {
         return (
-            <div className='framework-progressbar-main' style={{ width: this.props.width }}>
-                <div className='framework-progressbar-bar' style={{ width: (this.props.width - 6) * this.props.value }}>
+            <div className='framework-progressbar-main' style={{ height: this.props.height }}>
+                <div className='framework-progressbar-bar' style={{ width: (this.props.value * 100).toString() + '%' }}>
                 </div>
             </div>
         );

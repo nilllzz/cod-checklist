@@ -4,6 +4,7 @@ import Weapon from "../../../weapons/weapon";
 import IWButton from "../../iw_button";
 import ProgressBar from "../../progress_bar";
 import WeaponBox from "./weaponBox";
+import Title from "../../title";
 
 interface INextCompletionState {
     weapons: Weapon[];
@@ -34,9 +35,7 @@ export default class NextCompletion extends React.Component<any, INextCompletion
             <div className='weapons-nextcompletion-main'>
 
                 <div className='weapons-nextcompletion-text'>
-                    <span>
-                        Weapons closest to completion:
-                    </span>
+                    <span>Weapons closest to completion</span>
                 </div>
 
                 <div className='weapons-nextcompletion-weapons'>

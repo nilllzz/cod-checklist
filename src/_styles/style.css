@@ -1,9 +1,6 @@
-@import url("button.css");
 @import url("classSelection.css");
 @import url("homepage.css");
-@import url("iwLogo.css");
 @import url("nextcompletion.css");
-@import url("progressBar.css");
 @import url("totalCompletion.css");
 @import url("weaponBox.css");
 @import url("weapons.css");
@@ -11,6 +8,10 @@
 @font-face {
     font-family: "Electrolize";
     src: url(/fonts/cod.woff2) format("truetype");
+}
+
+html {
+    background-color: rgb(127, 127, 127);
 }
 
 body {

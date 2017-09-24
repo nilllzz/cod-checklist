@@ -1,0 +1,103 @@
+
+.framework-iw-logo {
+    display: flex;
+    align-items: center;
+}
+
+.framework-iw-logo-title {
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+.framework-iw-logo-title-iw {
+    font-weight: bold;
+    color: rgb(255, 252, 6);
+    text-shadow:
+     -1px -1px 0 rgb(188, 188, 140),  
+      1px -1px 0 rgb(188, 188, 140),
+      -1px 1px 0 rgb(188, 188, 140),
+       1px 1px 0 rgb(188, 188, 140);
+}
+
+.framework-title-main {
+    height: 28px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.framework-title-block {
+    width: 4px;
+    height: 100%;
+    background-color: rgb(255, 202, 91);
+}
+
+.framework-title-text {
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    color: rgb(230, 230, 230);
+}
+
+.framework-button {
+    height: 28px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.framework-button-text {
+    margin-left: 10px;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+.framework-button:hover {
+    transition: 
+        color .1s ease-in,
+        box-shadow .5s ease-in,
+        background-image .1s ease-in;
+    background-repeat: repeat;
+    outline: none;
+}
+
+.framework-button-enabled {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPk4WH4DwABXQEZ1dfRTQAAAABJRU5ErkJggg==);
+    color: rgb(250, 250, 250);
+}
+
+.framework-button-enabled:hover {
+    background-image: url('../resources/img/ui/button_back.png');
+    color: rgb(20, 20, 20);
+    border-color: rgb(255, 202, 91);
+    box-shadow: 0 0 10px rgb(255, 202, 91), 3px 3px rgba(235, 201, 105, 0.7);
+}
+
+.framework-button-disabled {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM88R8AApUByU2MEcEAAAAASUVORK5CYII=);
+    color: rgb(25, 25, 25);
+}
+
+.framework-button-disabled:hover {
+    background-image: url('../resources/img/ui/button_back_disabled.png');
+    color: rgb(20, 20, 20);
+    border-color: rgb(255, 202, 91);
+    box-shadow: 0 0 10px rgb(255, 202, 91), 3px 3px rgba(235, 201, 105, 0.7);
+}
+
+.framework-progressbar-main {
+    background-color: rgb(20, 20, 20);
+    padding: 3px;
+    width: 100%;
+}
+
+.framework-progressbar-bar {
+    height: 100%;
+    background-image: url('../resources/img/ui/button_back.png');
+    box-shadow: 0 0 6px rgb(255, 202, 91);
+    background-repeat: repeat;
+}

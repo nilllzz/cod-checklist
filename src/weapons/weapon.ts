@@ -6,7 +6,15 @@ import R3K from "./assaultRifles/r3k";
 export default abstract class Weapon {
 
     public static WeaponClass = {
-        ARs: 'Assault Rifles'
+        ARs: 'Assault Rifles',
+        SMGs: 'Submachine Guns',
+        LMGs: 'Light Machine Guns',
+        Snipers: 'Sniper Rifles',
+        Shotguns: 'Shotguns',
+        Handguns: 'Handguns',
+        Launchers: 'Launchers',
+        Melee: 'Melee',
+        Classic: 'Classic'
     }
 
     public name: string;

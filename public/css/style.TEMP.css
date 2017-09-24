@@ -1,45 +1,154 @@
 
-.framework-button {
-    height: 28px;
+.weaponclass-content {
+    padding-top: 30px;
+}
+
+.weaponclass-progress {
+    width: 600px;
+}
+
+.weaponclass-progress-badges {
+    display: flex;
+    margin-top: 4px;
+    margin-bottom: 24px;
+}
+
+.weaponclass-progress-gold {
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    background-color: rgb(10, 10, 10);
+    margin-right: 4px;
+}
+
+.weaponclass-progress-gold img {
+    width: 100%;
+    height: 100%;
+}
+
+.weaponclass-progress-gold-disabled {
+    filter: grayscale(100%);
+}
+
+.weaponclass-weapons-title {
+    font-size: 16px;
+}
+
+.weaponclass-weapons-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.weapondetail-content {
+    padding-top: 30px;
+    display: flex;
+}
+
+.weapondetail-content--left {
+    width: 40%;
+}
+
+.weapondetail-header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(60, 60, 60);
+}
+
+.weapondetail-name {
+    height: 60%;
+    font-size: 32px;
+    color: rgb(220, 220, 220);
     display: flex;
     align-items: center;
-    cursor: pointer;
-    margin-bottom: 10px;
+    padding-left: 10px;
 }
 
-.framework-button-text {
-    margin-left: 10px;
+.weapondetail-class {
+    height: 40%;
+    background-color: rgb(54, 54, 54);
+    font-size: 16px;
+    color: rgb(200, 200, 200);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
 }
 
-.framework-button:hover {
-    transition: 
-        color .1s ease-in,
-        box-shadow .5s ease-in,
-        background-image .1s ease-in;
-    background-repeat: repeat;
-    outline: none;
+.weapondetail-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.framework-button-enabled {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPk4WH4DwABXQEZ1dfRTQAAAABJRU5ErkJggg==);
-    color: rgb(250, 250, 250);
+.weapondetail-img-desc {
+    width: 100%;
+    color: rgb(54, 54, 54);
+    padding-left: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
-.framework-button-enabled:hover {
-    background-image: url('../resources/img/ui/button_back.png');
-    color: rgb(20, 20, 20);
-    border-color: rgb(255, 202, 91);
-    box-shadow: 0 0 10px rgb(255, 202, 91), 3px 3px rgba(235, 201, 105, 0.7);
+.weapondetail-img img {
+    width: 90%;
+    padding-top: 24px;
+    filter: drop-shadow(0 0 4px rgb(20, 20, 20)); 
 }
 
-.framework-button-disabled {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mM88R8AApUByU2MEcEAAAAASUVORK5CYII=);
-    color: rgb(25, 25, 25);
+.weapondetail-progress {
+    padding-top: 24px;
 }
 
-.framework-button-disabled:hover {
-    background-image: url('../resources/img/ui/button_back_disabled.png');
-    color: rgb(20, 20, 20);
-    border-color: rgb(255, 202, 91);
-    box-shadow: 0 0 10px rgb(255, 202, 91), 3px 3px rgba(235, 201, 105, 0.7);
+.weapondetail-content--right {
+    width: 60%;
+    margin-left: 20px;
+}
+
+.weapondetail-challenges {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.challengebox-main {
+    background-color: rgb(60, 60, 60);
+    width: 140px;
+    height: 166px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.challengebox-header {
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    height: 24px;
+    display: flex;
+}
+
+.challengebox-header-coloredbox {
+    width: 4px;
+    height: 100%;
+    background-color: rgb(200, 200, 200);
+}
+
+.challengebox-header-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: rgb(200, 200, 200);
+    align-items: center;
+}
+
+.challgenbox-camo {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+
+.challengebox-progress {
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    height: 24px;
+    display: flex;
+    padding: 2px;
 }
