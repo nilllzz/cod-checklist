@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Button } from "react-bootstrap";
 
 export default class HomePage extends React.Component<any, any> {
 
@@ -6,6 +7,9 @@ export default class HomePage extends React.Component<any, any> {
         return (
             <div>
                 Hello World from routed React.
+                <Button>
+                    Hi
+                </Button>
             </div>
         )
     }
