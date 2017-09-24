@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import HomePage from "./pages/home";
+import HomePage from "./components/pages/home";
 
 export default class PageRouter extends React.Component {
 

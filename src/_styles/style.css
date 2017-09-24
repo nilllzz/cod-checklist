@@ -1,0 +1,13 @@
+@import url("homepage.css");
+
+@font-face {
+    font-family: "Electrolize";
+    src: url(/fonts/cod.woff2) format("truetype");
+}
+
+body {
+    font-family: 'Electrolize';
+    height: 100%;
+    background: linear-gradient(to bottom, #e3e3e3 0%,#7f7f7f 100%);
+    margin: 0;
+}
