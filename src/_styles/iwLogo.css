@@ -1,0 +1,20 @@
+
+.framework-iw-logo {
+    display: flex;
+    align-items: center;
+}
+
+.framework-iw-logo-title {
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+.framework-iw-logo-title-iw {
+    font-weight: bold;
+    color: rgb(255, 252, 6);
+    text-shadow:
+     -1px -1px 0 rgb(188, 188, 140),  
+      1px -1px 0 rgb(188, 188, 140),
+      -1px 1px 0 rgb(188, 188, 140),
+       1px 1px 0 rgb(188, 188, 140);
+}

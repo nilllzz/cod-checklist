@@ -1,4 +1,12 @@
+@import url("button.css");
+@import url("classSelection.css");
 @import url("homepage.css");
+@import url("iwLogo.css");
+@import url("nextcompletion.css");
+@import url("progressBar.css");
+@import url("totalCompletion.css");
+@import url("weaponBox.css");
+@import url("weapons.css");
 
 @font-face {
     font-family: "Electrolize";
@@ -10,4 +18,5 @@ body {
     height: 100%;
     background: linear-gradient(to bottom, #e3e3e3 0%,#7f7f7f 100%);
     margin: 0;
+    padding: 50px;
 }

@@ -1,0 +1,9 @@
+
+.weapons-content-main {
+    display: flex;
+    padding-top: 30px;
+}
+
+.weapons-content-main--right {
+    margin-left: 60px;
+}

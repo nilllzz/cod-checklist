@@ -1,0 +1,13 @@
+
+.totalCompletion-main {
+    font-size: 16px;
+}
+
+.totalCompletion-progress {
+    display: flex;
+    align-items: center;
+}
+
+.totalCompletion-progress-text {
+    margin-left: 10px;
+}

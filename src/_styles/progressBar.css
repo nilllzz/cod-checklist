@@ -1,0 +1,12 @@
+
+.framework-progressbar-main {
+    height: 28px;
+    background-color: rgb(20, 20, 20);
+    padding: 3px;
+}
+
+.framework-progressbar-bar {
+    height: 100%;
+    background-image: url('../resources/img/ui/button_back.png');
+    background-repeat: repeat;
+}
