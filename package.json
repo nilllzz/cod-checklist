@@ -1,0 +1,22 @@
+{
+  "name": "iw-checklist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/nilllzz/iw-checklist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/nilllzz/iw-checklist/issues"
+  },
+  "homepage": "https://gitlab.com/nilllzz/iw-checklist#README",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
