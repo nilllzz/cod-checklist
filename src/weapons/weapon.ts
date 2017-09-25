@@ -1,7 +1,5 @@
 import Challenge from "./challenge";
 import User from "../user";
-import NV4 from "./assaultRifles/nv4";
-import R3K from "./assaultRifles/r3k";
 
 export class WeaponFact {
 
