@@ -3,11 +3,14 @@ import { Button } from "react-bootstrap";
 import IWButton from "../iw_button";
 import User from "../../user";
 import IWLogo from "../iw_logo";
-import { Link } from "react-router-dom";
 
-export default class HomePage extends React.Component<any, any> {
+interface IHomePageProps {
+    onLoadedChanged: (loaded: boolean) => void;
+}
 
-    public constructor(props: any) {
+export default class HomePage extends React.Component<IHomePageProps, any> {
+
+    public constructor(props: IHomePageProps) {
         super(props);
 
         this.onClick_Load = this.onClick_Load.bind(this);
@@ -15,11 +18,15 @@ export default class HomePage extends React.Component<any, any> {
     }
 
     private onClick_Load() {
+        console.log('clicked on load');
         User.load();
+        console.log('loaded user with result', User.isLoaded);
+        this.props.onLoadedChanged(User.isLoaded);
     }
 
     private onClick_New() {
-
+        User.createNew();
+        this.props.onLoadedChanged(User.isLoaded);
     }
 
     render() {
@@ -39,9 +46,7 @@ export default class HomePage extends React.Component<any, any> {
                         </span>
                     </div>
                     <div className='homepage-content-options'>
-                        <Link to='/weapons'>
-                            <IWButton text='Load' onClick={this.onClick_Load} />
-                        </Link>
+                        <IWButton text='Load' onClick={this.onClick_Load} />
                         <IWButton text='New' onClick={this.onClick_New} />
                     </div>
                 </div>

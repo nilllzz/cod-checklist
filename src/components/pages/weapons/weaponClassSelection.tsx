@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export default class WeaponClassSelection extends React.Component<any, any> {
 
     private static getWeaponClassLink(weaponClass: string): string {
-        return '/weapons/' + weaponClass.replace(' ', '').toLowerCase();
+        return '/' + weaponClass.replace(' ', '').toLowerCase();
     }
 
     public render() {

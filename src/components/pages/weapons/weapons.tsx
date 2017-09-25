@@ -10,6 +10,7 @@ export default class WeaponsPage extends React.Component<any, any> {
     public render() {
         return (
             <div className='weapons-main'>
+                
                 <IWLogo />
 
                 <div className='weapons-content'>

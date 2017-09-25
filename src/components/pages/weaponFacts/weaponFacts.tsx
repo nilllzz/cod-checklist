@@ -17,7 +17,7 @@ export default class WeaponFactsPage extends React.Component<any, any> {
         let i = 0;
         while (i < weapons.length && !this.weapon) {
             var w = weapons[i];
-            if (w.getLink() === '/weapons/' + weaponClass + '/' + weaponName) {
+            if (w.getLink() === '/' + weaponClass + '/' + weaponName) {
                 this.weapon = w;
             }
             i++;
@@ -70,7 +70,7 @@ export default class WeaponFactsPage extends React.Component<any, any> {
                             {
                                 this.weapon.facts.map(f => {
                                     return (
-                                        <div className='weaponfacts-fact'>
+                                        <div className='weaponfacts-fact' key={f.name}>
                                             <div className='weaponfacts-fact-name'>
                                                 <span>{f.name}</span>
                                             </div>

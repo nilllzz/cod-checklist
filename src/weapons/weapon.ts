@@ -63,7 +63,7 @@ export default abstract class Weapon {
     }
 
     public getLink() {
-        return '/weapons/' +
+        return '/' +
             this.weaponClass.replace(' ', '').toLowerCase() +
             '/' +
             this.name.replace(' ', '').toLowerCase();

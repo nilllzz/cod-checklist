@@ -42,7 +42,7 @@ export default class NextCompletion extends React.Component<any, INextCompletion
                     {
                         this.state.weapons.map(w => {
                             return (
-                                <WeaponBox weapon={w} />
+                                <WeaponBox weapon={w} key={w.name} />
                             );
                         })
                     }

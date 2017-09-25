@@ -4,6 +4,14 @@
     padding-top: 30px;
 }
 
+.weapons-content-main--left {
+    width: 500px;
+}
+
 .weapons-content-main--right {
     margin-left: 60px;
+}
+
+.weapons-class-selection-options {
+    width: 0%;
 }

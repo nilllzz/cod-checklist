@@ -4,6 +4,7 @@ import WeaponProvider from "./weapons/weaponProvider";
 export default class User {
 
     private static data: any;
+    public static isLoaded: boolean;
 
     private static getDefaultData(): any {
         const data: any = {};
@@ -119,16 +120,35 @@ export default class User {
         return data;
     }
 
-    public static load() {
+    public static createNew() {
+        console.log('create a new user storage');
         User.data = User.getDefaultData();
+        User.save();
+        User.data = undefined; // reset to load from storage afterwards
+        User.load();
+    }
+
+    public static load() {
+        console.log('attempt to load user data from storage.');
+        const data = localStorage.getItem('data');
+        if (!data) {
+            console.log('no storage data found.');
+            User.isLoaded = false;
+        }
+        else {
+            console.log('storage data found, loading.');
+            User.data = JSON.parse(data);
+            User.isLoaded = true;
+        }
     }
 
     public static save() {
-
+        console.log('save data to storage.');
+        const data = User.data;
+        localStorage.setItem('data', JSON.stringify(data));
     }
 
     public static getData(): any {
-        User.load();
         return User.data;
     }
 

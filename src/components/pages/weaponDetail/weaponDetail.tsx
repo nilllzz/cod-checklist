@@ -20,7 +20,7 @@ export default class WeaponDetailPage extends React.Component<any, any> {
         let i = 0;
         while (i < weapons.length && !this.weapon) {
             var w = weapons[i];
-            if (w.getLink() === '/weapons/' + weaponClass + '/' + weaponName) {
+            if (w.getLink() === '/' + weaponClass + '/' + weaponName) {
                 this.weapon = w;
             }
             i++;
@@ -31,7 +31,7 @@ export default class WeaponDetailPage extends React.Component<any, any> {
         return (
             <div className='weapondetail-main'>
 
-                <ArrowBack linkTo={'/weapons/' + this.props.match.params.weaponclass} />
+                <ArrowBack linkTo={'/' + this.props.match.params.weaponclass} />
                 <IWLogo />
 
                 <div className='weapondetail-content'>
@@ -62,7 +62,7 @@ export default class WeaponDetailPage extends React.Component<any, any> {
                             {
                                 this.weapon.challenges.map(c => {
                                     return (
-                                        <ChallengeBox challenge={c} />
+                                        <ChallengeBox challenge={c} key={c.challengeName} />
                                     )
                                 })
                             }

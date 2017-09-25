@@ -90,6 +90,8 @@
 }
 
 .weapondetail-img img {
+    transition: 
+        filter .1s ease-in;
     width: 90%;
     padding-top: 24px;
     filter: drop-shadow(0 0 4px rgb(20, 20, 20));
@@ -97,6 +99,10 @@
 }
 
 .weapondetail-img img:hover {
+    filter: drop-shadow(0 0 10px rgb(255, 202, 91)); 
+}
+
+.weapondetail-img img:active {
     filter: drop-shadow(0 0 10px rgb(245, 229, 147)); 
 }
 
@@ -145,9 +151,20 @@
 }
 
 .challgenbox-camo {
+    transition: 
+        filter .05s ease-in;
     display: flex;
     justify-content: center;
     padding: 2px;
+    cursor: pointer;
+}
+
+.challgenbox-camo:hover {
+    filter: drop-shadow(0 0 4px rgb(255, 202, 91));
+}
+
+.challgenbox-camo:active {
+    filter: drop-shadow(0 0 4px rgb(255, 252, 6));
 }
 
 .challengebox-progress {
@@ -208,7 +225,6 @@
 
 .weaponfacts-header-manufacturer--img img {
     height: 24px;
-    background-color: rgb(190, 190, 190);
     padding: 2px;
 }
 
@@ -249,6 +265,8 @@
 }
 
 .framework-arrow {
+    transition: 
+        filter .1s ease-in;
     background-image: url('../resources/img/ui/arrow.png');
     height: 35px;
     width: 17px;
@@ -260,4 +278,8 @@
 
 .framework-arrow:hover {
     filter: drop-shadow(0 0 6px rgb(195, 103, 61));
+}
+
+.framework-arrow:active {
+    filter: brightness(2);
 }

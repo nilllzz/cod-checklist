@@ -26,7 +26,7 @@ export default class WeaponClassPage extends React.Component<any, any> {
         return (
             <div className='weaponclass-main'>
 
-                <ArrowBack linkTo={'/weapons'} />
+                <ArrowBack linkTo={'/'} />
                 <IWLogo />
 
                 <div className='weaponclass-content'>
@@ -40,7 +40,7 @@ export default class WeaponClassPage extends React.Component<any, any> {
                             {
                                 this.weapons.map(w => {
                                     return (
-                                        <div className={'weaponclass-progress-gold' +
+                                        <div key={w.name} className={'weaponclass-progress-gold' +
                                             (w.getCompletion() == 1 ? '' : ' weaponclass-progress-gold-disabled')}>
                                             <img src='resources/img/camos/gold.png' />
                                         </div>
@@ -57,7 +57,7 @@ export default class WeaponClassPage extends React.Component<any, any> {
                             {
                                 this.weapons.map(w => {
                                     return (
-                                        <WeaponBox weapon={w} />
+                                        <WeaponBox weapon={w} key={w.name} />
                                     )
                                 })
                             }
