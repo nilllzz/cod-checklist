@@ -9,6 +9,9 @@ export default class KBAR32 extends AssaultRifle {
             'kbar32.png',  
             'Full-auto ballistic rifle. Channels a fast fire rate through a lightweight mold for increased hip fire control and mobility.',
         );
+
+        this.manufacturer = 'kb';
+
     }
 
 

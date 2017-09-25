@@ -3,6 +3,21 @@ import User from "../user";
 import NV4 from "./assaultRifles/nv4";
 import R3K from "./assaultRifles/r3k";
 
+export class WeaponFact {
+
+    public static FireMode = {
+        Auto: 'Automatic',
+    }
+
+    public name: string;
+    public value: string;
+
+    constructor(name: string, value: string) {
+        this.name = name;
+        this.value = value;
+    }
+}
+
 export default abstract class Weapon {
 
     public static WeaponClass = {
@@ -24,11 +39,16 @@ export default abstract class Weapon {
 
     public challenges: Challenge[];
 
+    public facts: WeaponFact[];
+    public manufacturer: string;
+
     protected constructor(name: string, weaponClass: string, img: string, description: string) {
         this.name = name;
         this.description = description;
         this.weaponClass = weaponClass;
         this.img = 'resources/img/weapons/' + img;
+
+        this.facts = [];
     }
 
     public getData(): any {

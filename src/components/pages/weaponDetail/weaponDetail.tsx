@@ -4,6 +4,8 @@ import Weapon from "../../../weapons/weapon";
 import User from "../../../user";
 import TotalCompletion from "../weapons/totalCompletion";
 import ChallengeBox from "./challengeBox";
+import ArrowBack from "../../arrowBack";
+import { Link } from "react-router-dom";
 
 export default class WeaponDetailPage extends React.Component<any, any> {
 
@@ -29,6 +31,7 @@ export default class WeaponDetailPage extends React.Component<any, any> {
         return (
             <div className='weapondetail-main'>
 
+                <ArrowBack linkTo={'/weapons/' + this.props.match.params.weaponclass} />
                 <IWLogo />
 
                 <div className='weapondetail-content'>
@@ -45,7 +48,9 @@ export default class WeaponDetailPage extends React.Component<any, any> {
                             <div className='weapondetail-img-desc'>
                                 <span>{this.weapon.description}</span>
                             </div>
-                            <img src={this.weapon.img} />
+                            <Link to={this.weapon.getLink() + '/details'}>
+                                <img src={this.weapon.img} />
+                            </Link>
                         </div>
                         <div className='weapondetail-progress'>
                             <TotalCompletion text={'Gold camo progress'}

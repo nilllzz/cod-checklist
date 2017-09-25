@@ -15,6 +15,27 @@ import HVR from "./weapons/submachineguns/hvr";
 import VPR from "./weapons/submachineguns/vpr";
 import Trencher from "./weapons/submachineguns/trencher";
 import RaijinEMX from "./weapons/submachineguns/raijinemx";
+import RAW from "./weapons/lightMachineGuns/raw";
+import Mauler from "./weapons/lightMachineGuns/mauler";
+import Titan from "./weapons/lightMachineGuns/titan";
+import Auger from "./weapons/lightMachineGuns/auger";
+import Atlas from "./weapons/lightMachineGuns/Atlas";
+import KBSLongbow from "./weapons/snipers/kbslongbow";
+import EBR800 from "./weapons/snipers/ebr800";
+import Widowmaker from "./weapons/snipers/widowmaker";
+import Trek50 from "./weapons/snipers/trek50";
+import Proteus from "./weapons/snipers/proteus";
+import DMR1 from "./weapons/snipers/dmr1";
+import Reaver from "./weapons/shotguns/reaver";
+import Banshee from "./weapons/shotguns/Banshee";
+import DCM8 from "./weapons/shotguns/dcm8";
+import Rack9 from "./weapons/shotguns/rack9";
+import M2187 from "./weapons/shotguns/m2187";
+import OSA from "./weapons/classic/osa";
+import MacTav45 from "./weapons/classic/mactav45";
+import TF141 from "./weapons/classic/tf141";
+import M1 from "./weapons/classic/m1";
+import SRavage from "./weapons/classic/sravage";
 
 export default class User {
 
@@ -22,7 +43,7 @@ export default class User {
 
     private static getDefaultData(): any {
         const data: any = {};
-        ['NV4', 'R3K', 'KBAR-32', 'Type-2', 'Volk', 'R-VN', 'X-Eon', 'G-Rail'].forEach(weapon => {
+        ['NV4', 'R3K', 'KBAR-32', 'Type-2', 'Volk', 'R-VN', 'X-Eon', 'G-Rail', 'OSA'].forEach(weapon => {
             const weaponData = {
                 kills: 200,
                 headshots: 72,
@@ -34,9 +55,45 @@ export default class User {
             };
             data[weapon] = weaponData;
         });
-        ['Erad', 'FHR-40', 'Karma-45', 'RPR Evo', 'HVR', 'VPR', 'Trencher', 'Raijin-EMX'].forEach(weapon => {
+        ['Erad', 'FHR-40', 'Karma-45', 'RPR Evo', 'HVR', 'VPR', 'Trencher', 'Raijin-EMX', 'MacTav-45'].forEach(weapon => {
             const weaponData = {
                 kills: 120,
+                hipshots: 0,
+                pointBlank: 0,
+                slide: 0,
+                noAttachments: 0,
+                rapid: 0,
+                threeKills: 0,
+            };
+            data[weapon] = weaponData;
+        });
+        ['R.A.W.', 'Mauler', 'Titan', 'Auger', 'Atlas'].forEach(weapon => {
+            const weaponData = {
+                kills: 0,
+                headshots: 0,
+                hipshots: 0,
+                last15: 0,
+                allAttachments: 0,
+                rapid: 0,
+                threeKills: 0,
+            };
+            data[weapon] = weaponData;
+        });
+        ['KBS Longbow', 'EBR-800', 'Widowmaker', 'DMR-1', 'Trek-50', 'Proteus', 'TF-141', 'M1'].forEach(weapon => {
+            const weaponData = {
+                kills: 200,
+                headshots: 12,
+                longshots: 0,
+                holdBreath: 0,
+                allAttachments: 0,
+                rapid: 0,
+                threeKills: 0,
+            };
+            data[weapon] = weaponData;
+        });
+        ['Reaver', 'Banshee', 'DCM-8', 'Rack-9', 'M.2187', 'S-Ravage'].forEach(weapon => {
+            const weaponData = {
+                kills: 15,
                 hipshots: 0,
                 pointBlank: 0,
                 slide: 0,
@@ -83,7 +140,32 @@ export default class User {
                 new HVR(),
                 new VPR(),
                 new Trencher(),
-                new RaijinEMX()
+                new RaijinEMX(),
+
+                new RAW(),
+                new Mauler(),
+                new Titan(),
+                new Auger(),
+                new Atlas(),
+
+                new KBSLongbow(),
+                new EBR800(),
+                new Widowmaker(),
+                new DMR1(),
+                new Trek50(),
+                new Proteus(),
+
+                new Reaver(),
+                new Banshee(),
+                new DCM8(),
+                new Rack9(),
+                new M2187(),
+                
+                new OSA(),
+                new MacTav45(),
+                new TF141(),
+                new M1(),
+                new SRavage()
             ];
         }
 
@@ -93,12 +175,14 @@ export default class User {
     public static getCompletion(weaponClass: string = ''): number {
         const weapons = User.getWeapons();
         let completion = 0;
+        let count = 0;
         weapons.forEach(w => {
             if (weaponClass === '' || w.weaponClass === weaponClass) {
                 completion += w.getCompletion();
+                count++;
             }
         });
-        completion /= weapons.length;
+        completion /= count;
         return completion;
     }
 

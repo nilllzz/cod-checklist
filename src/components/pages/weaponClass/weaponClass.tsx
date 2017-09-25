@@ -4,6 +4,7 @@ import Weapon from "../../../weapons/weapon";
 import WeaponBox from "../weapons/weaponBox";
 import IWLogo from "../../iw_logo";
 import TotalCompletion from "../weapons/totalCompletion";
+import ArrowBack from "../../arrowBack";
 
 export default class WeaponClassPage extends React.Component<any, any> {
 
@@ -25,6 +26,7 @@ export default class WeaponClassPage extends React.Component<any, any> {
         return (
             <div className='weaponclass-main'>
 
+                <ArrowBack linkTo={'/weapons'} />
                 <IWLogo />
 
                 <div className='weaponclass-content'>
