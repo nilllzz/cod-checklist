@@ -36,6 +36,13 @@ import MacTav45 from "./weapons/classic/mactav45";
 import TF141 from "./weapons/classic/tf141";
 import M1 from "./weapons/classic/m1";
 import SRavage from "./weapons/classic/sravage";
+import Hornet from "./weapons/classic/hornet";
+import EMC from "./weapons/handguns/emc";
+import Kendall44 from "./weapons/handguns/kendall44";
+import Oni from "./weapons/handguns/oni";
+import Hailstorm from "./weapons/handguns/hailstorm";
+import UDM from "./weapons/handguns/udm";
+import Stallion44 from "./weapons/handguns/stallion44";
 
 export default class User {
 
@@ -103,6 +110,18 @@ export default class User {
             };
             data[weapon] = weaponData;
         });
+        ['EMC', 'Oni', 'Kendall 44', 'Hailstorm', 'UDM', 'Stallion .44', 'Hornet'].forEach(weapon => {
+            const weaponData = {
+                kills: 200,
+                headshots: 160,
+                pointBlank: 20,
+                noPrimary: 10,
+                allAttachments: 0,
+                rapid: 0,
+                threeKills: 0,
+            };
+            data[weapon] = weaponData;
+        });
         return data;
     }
 
@@ -165,7 +184,15 @@ export default class User {
                 new MacTav45(),
                 new TF141(),
                 new M1(),
-                new SRavage()
+                new SRavage(),
+                new Hornet(),
+                
+                new EMC(),
+                new Oni(),
+                new Kendall44(),
+                new Hailstorm(),
+                new UDM(),
+                new Stallion44(),
             ];
         }
 
