@@ -13,10 +13,11 @@ export default class NV4 extends AssaultRifle {
         this.manufacturer = 'kb';
 
         this.facts.push(new WeaponFact('Damage', '30 - 23'));
-        this.facts.push(new WeaponFact('Fire Mode', WeaponFact.FireMode.Auto));
         this.facts.push(new WeaponFact('Fire Rate', '612 RPM'));
         this.facts.push(new WeaponFact('Magazine Size', '30 / 45'));
         this.facts.push(new WeaponFact('Recoil', 'Very low'));
+
+        this.fireModes.push(Weapon.FireMode.fullauto);
     }
 
 

@@ -10,6 +10,7 @@ export default class WeaponClassPage extends React.Component<any, any> {
 
     private weapons: Weapon[];
     private weaponClass: string;
+    private unlockedDiamond: boolean;
 
     constructor(props: any) {
         super(props);
@@ -20,6 +21,15 @@ export default class WeaponClassPage extends React.Component<any, any> {
             w.weaponClass.replace(' ', '').toLowerCase() == weaponClass);
 
         this.weaponClass = this.weapons[0].weaponClass;
+
+        let unlockedDiamond = true;
+        for (let i = 0; i < this.weapons.length; i++) {
+            const weapon = this.weapons[i];
+            if (weapon.diamondRequirement && weapon.getCompletion() < 1) {
+                unlockedDiamond = false;
+            }
+        }
+        this.unlockedDiamond = unlockedDiamond;
     }
 
     public render() {
@@ -47,6 +57,10 @@ export default class WeaponClassPage extends React.Component<any, any> {
                                     )
                                 })
                             }
+                            <div key={'diamond'} className={'weaponclass-progress-gold' +
+                                (this.unlockedDiamond ? '' : ' weaponclass-progress-gold-disabled')}>
+                                <img src='resources/img/camos/diamond.png' />
+                            </div>
                         </div>
                     </div>
                     <div className='weaponclass-weapons'>

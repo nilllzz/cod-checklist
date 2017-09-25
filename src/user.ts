@@ -1,5 +1,6 @@
 import Weapon from "./weapons/weapon";
 import WeaponProvider from "./weapons/weaponProvider";
+import Challenge from "./weapons/challenge";
 
 export default class User {
 
@@ -150,6 +151,11 @@ export default class User {
 
     public static getData(): any {
         return User.data;
+    }
+
+    public static setWeaponChallengeValue(challenge: Challenge, value: number): void {
+        User.data[challenge.weapon.name][challenge.valueName] = value;
+        User.save();
     }
 
     private static weapons: Weapon[];

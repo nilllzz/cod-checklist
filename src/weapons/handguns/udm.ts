@@ -9,6 +9,8 @@ export default class UDM extends Handgun {
             'udm.png',
             'Full-auto ballistic pistol built from modular pieces. This configuration has a slow fire rate but high damage that is effective at longer ranges.',
         );
+
+        this.diamondRequirement = false;
     }
 
 

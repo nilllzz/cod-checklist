@@ -14,8 +14,8 @@ export default abstract class SubmachineGun extends Weapon {
         const mojave = new Challenge(this, 'Mojave', "mojave", 'hipshots', 20, [wilderness]);
         const snakeskin = new Challenge(this, 'Snake Skin', "snake_skin", 'hipshots', 40, [wilderness]);
         const salamander = new Challenge(this, 'Salamander', "salamander", 'hipshots', 60, [wilderness]);
-        const splatter = new Challenge(this, 'splatter', "splatter", 'hipshots', 100, [wilderness]);
-        const zebra = new Challenge(this, 'zebra', "zebra", 'hipshots', 160, [wilderness]);
+        const splatter = new Challenge(this, 'Splatter', "splatter", 'hipshots', 100, [wilderness]);
+        const zebra = new Challenge(this, 'Zebra', "zebra", 'hipshots', 160, [wilderness]);
 
         const autumn = new Challenge(this, 'Autumn', "autumn", 'pointBlank', 25, [mojave]);
         const whiteout = new Challenge(this, 'Whiteout', "whiteout", 'slide', 50, [snakeskin]);

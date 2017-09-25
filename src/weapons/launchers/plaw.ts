@@ -19,8 +19,8 @@ export default class PLAW extends Weapon {
         const mojave = new Challenge(this, 'Mojave', "mojave", 'scorestreakScore', 8000, [wilderness]);
         const snakeskin = new Challenge(this, 'Snake Skin', "snake_skin", 'scorestreakScore', 16000, [wilderness]);
         const salamander = new Challenge(this, 'Salamander', "salamander", 'scorestreakScore', 24000, [wilderness]);
-        const splatter = new Challenge(this, 'splatter', "splatter", 'scorestreakScore', 32000, [wilderness]);
-        const zebra = new Challenge(this, 'zebra', "zebra", 'scorestreakScore', 45000, [wilderness]);
+        const splatter = new Challenge(this, 'Splatter', "splatter", 'scorestreakScore', 32000, [wilderness]);
+        const zebra = new Challenge(this, 'Zebra', "zebra", 'scorestreakScore', 45000, [wilderness]);
 
         const autumn = new Challenge(this, 'Autumn', "autumn", 'kills', 50, [mojave]);
         const whiteout = new Challenge(this, 'Whiteout', "whiteout", 'rapid', 5, [snakeskin]);

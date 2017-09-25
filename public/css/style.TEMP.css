@@ -75,13 +75,13 @@
     padding-left: 10px;
 }
 
-.weapondetail-img {
+.weapondetail-display {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.weapondetail-img-desc {
+.weapondetail-display-desc {
     width: 100%;
     color: rgb(54, 54, 54);
     padding-left: 10px;
@@ -89,25 +89,91 @@
     padding-bottom: 4px;
 }
 
-.weapondetail-img img {
+.weapondetail-display-img {
+    display: flex;
+    justify-content: center;
+}
+
+.weapondetail-display-img-container {
+    width: 90%;
+}
+
+.weapondetail-display-img img {
     transition: 
         filter .1s ease-in;
-    width: 90%;
+    width: 100%;
     padding-top: 24px;
     filter: drop-shadow(0 0 4px rgb(20, 20, 20));
     cursor: pointer;
 }
 
-.weapondetail-img img:hover {
+.weapondetail-display-img img:hover {
     filter: drop-shadow(0 0 10px rgb(255, 202, 91)); 
 }
 
-.weapondetail-img img:active {
+.weapondetail-display-img img:active {
     filter: drop-shadow(0 0 10px rgb(245, 229, 147)); 
 }
 
-.weapondetail-progress {
-    padding-top: 24px;
+.weapondetail-selectedchallenge {
+    width: 100%;
+    height: 124px;
+    margin-top: 24px;
+    display: flex;
+    background-color: rgb(60, 60, 60);
+}
+
+.weapondetail-selectedchallenge-camo {
+    background-color: rgb(54, 54, 54);
+}
+
+.weapondetail-selectedchallenge-camo img {
+    padding: 10px;
+    width: 100px;
+}
+
+.weapondetail-selectedchallenge-details {
+    width: 100%;
+}
+
+.weapondetail-selectedchallenge-details-title {
+    background-color: rgb(54, 54, 54);
+    height: 32px;
+    font-size: 16px;
+    color: rgb(200, 200, 200);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.weapondetail-selectedchallenge-details-body {
+    width: 100%;
+    color: rgb(200, 200, 200);
+    display: flex;
+}
+
+.weapondetail-selectedchallenge-details-progress {
+    max-width: 280px;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.weapondetail-selectedchallenge-details-value {
+    padding-top: 16px;
+    padding-left: 30px;
+}
+
+.weapondetail-selectedchallenge-details-value input {
+    width: 100px;
+    background-color: rgb(25, 25, 25);
+    border-color: rgb(54, 54, 54);
+    border-style: solid;
+    text-align: center;
+}
+
+.weapondetail-selectedchallenge-details-value input:focus {
+    border-color: rgb(245, 229, 147);
+    box-shadow: 0 0 10px rgb(255, 202, 91);
 }
 
 .weapondetail-content--right {
@@ -150,21 +216,41 @@
     align-items: center;
 }
 
-.challgenbox-camo {
+.challengebox-locked-camo, .challengebox-unlocked-camo, .challengebox-hidden-camo  {
     transition: 
         filter .05s ease-in;
-    display: flex;
-    justify-content: center;
-    padding: 2px;
     cursor: pointer;
 }
 
-.challgenbox-camo:hover {
+.challengebox-locked-camo:hover, .challengebox-unlocked-camo:hover {
     filter: drop-shadow(0 0 4px rgb(255, 202, 91));
 }
 
-.challgenbox-camo:active {
+.challengebox-locked-camo:active, .challengebox-unlocked-camo:active {
     filter: drop-shadow(0 0 4px rgb(255, 252, 6));
+}
+
+.challengebox-camo {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+
+.challengebox-locked-camo {
+    position: relative;
+}
+
+.challengebox-locked-camo .challengebox-locked-camo-overlay {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+}
+
+.challengebox-blurred-camo {
+    filter: blur(4px);
 }
 
 .challengebox-progress {
@@ -221,6 +307,25 @@
     justify-content: space-between;
     padding-left: 10px;
     padding-right: 20px;
+}
+
+.weaponfacts-firemodes {
+    display: flex;
+}
+
+.weaponfacts-firemode {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.weaponfacts-firemode span {
+    margin-left: 6px;
+}
+
+.weaponfacts-firemode img {
+    height: 24px;
 }
 
 .weaponfacts-header-manufacturer--img img {

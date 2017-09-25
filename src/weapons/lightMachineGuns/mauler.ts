@@ -1,4 +1,4 @@
-import Weapon from "../weapon";
+import Weapon, { WeaponFact } from "../weapon";
 import LightMachineGun from "./lightMachineGun";
 
 export default class Mauler extends LightMachineGun {
@@ -12,6 +12,9 @@ export default class Mauler extends LightMachineGun {
 
         this.manufacturer = 'kb';
 
+        this.facts.push(new WeaponFact('Magazine Size', '80 / 120'));
+
+        this.fireModes.push(Weapon.FireMode.fullauto);
     }
 
 

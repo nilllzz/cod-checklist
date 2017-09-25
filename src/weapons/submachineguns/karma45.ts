@@ -1,4 +1,4 @@
-import Weapon from "../weapon";
+import Weapon, { WeaponFact } from "../weapon";
 import SubmachineGun from "./submachineGun";
 
 export default class Karma45 extends SubmachineGun {
@@ -12,6 +12,11 @@ export default class Karma45 extends SubmachineGun {
 
         this.manufacturer = 'kb';
 
+        this.facts.push(new WeaponFact('Fire Rate', '800 RPM'));
+        this.facts.push(new WeaponFact('Magazine Size', '42 / 63'));
+        this.facts.push(new WeaponFact('Recoil', 'Medium'));
+
+        this.fireModes.push(Weapon.FireMode.fullauto);
     }
 
 

@@ -19,8 +19,8 @@ export default class CombatKnife extends Weapon {
         const mojave = new Challenge(this, 'Mojave', "mojave", 'backStab', 10, [wilderness]);
         const snakeskin = new Challenge(this, 'Snake Skin', "snake_skin", 'backStab', 20, [wilderness]);
         const salamander = new Challenge(this, 'Salamander', "salamander", 'backStab', 30, [wilderness]);
-        const splatter = new Challenge(this, 'splatter', "splatter", 'backStab', 50, [wilderness]);
-        const zebra = new Challenge(this, 'zebra', "zebra", 'backStab', 80, [wilderness]);
+        const splatter = new Challenge(this, 'Splatter', "splatter", 'backStab', 50, [wilderness]);
+        const zebra = new Challenge(this, 'Zebra', "zebra", 'backStab', 80, [wilderness]);
 
         const autumn = new Challenge(this, 'Autumn', "autumn", 'frontKills', 25, [mojave]);
         const whiteout = new Challenge(this, 'Whiteout', "whiteout", 'noPrimary', 50, [snakeskin]);

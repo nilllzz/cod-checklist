@@ -31,10 +31,10 @@ export default class WeaponFactsPage extends React.Component<any, any> {
             return (<div></div>);
         }
         else {
-            if (this.weapon.manufacturer === 'kb') {
+            if (['kb', 'sdf', 'edi'].includes(this.weapon.manufacturer)) {
                 return (
                     <div className='weaponfacts-header-manufacturer--img'>
-                        <img src='resources/img/manufacturers/kb.png' />
+                        <img src={'resources/img/manufacturers/' + this.weapon.manufacturer + '.png'} />
                     </div>
                 );
             }
@@ -59,6 +59,18 @@ export default class WeaponFactsPage extends React.Component<any, any> {
                     <div className='weaponfacts-header'>
                         <div className='weaponfacts-name'>
                             <span>{this.weapon.name}</span>
+                            <div className='weaponfacts-firemodes'>
+                                {
+                                    this.weapon.fireModes.map(f => {
+                                        return (
+                                            <div className='weaponfacts-firemode' key={f[0]}>
+                                                <img src={'resources/img/firemodes/' + f[0] + '.png'} />
+                                                <span>{f[1]}</span>
+                                            </div>
+                                        );
+                                    })
+                                }
+                            </div>
                             {this.renderManufacturer()}
                         </div>
                         <div className='weaponfacts-class'>

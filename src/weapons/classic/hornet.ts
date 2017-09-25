@@ -19,8 +19,8 @@ export default class Hornet extends Weapon {
         const mojave = new Challenge(this, 'Mojave', "mojave", 'headshots', 20, [wilderness]);
         const snakeskin = new Challenge(this, 'Snake Skin', "snake_skin", 'headshots', 40, [wilderness]);
         const salamander = new Challenge(this, 'Salamander', "salamander", 'headshots', 60, [wilderness]);
-        const splatter = new Challenge(this, 'splatter', "splatter", 'headshots', 100, [wilderness]);
-        const zebra = new Challenge(this, 'zebra', "zebra", 'headshots', 160, [wilderness]);
+        const splatter = new Challenge(this, 'Splatter', "splatter", 'headshots', 100, [wilderness]);
+        const zebra = new Challenge(this, 'Zebra', "zebra", 'headshots', 160, [wilderness]);
 
         const autumn = new Challenge(this, 'Autumn', "autumn", 'pointBlank', 25, [mojave]);
         const whiteout = new Challenge(this, 'Whiteout', "whiteout", 'noPrimary', 50, [snakeskin]);

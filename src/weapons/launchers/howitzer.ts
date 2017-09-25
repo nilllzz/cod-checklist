@@ -19,8 +19,8 @@ export default class Howitzer extends Weapon {
         const mojave = new Challenge(this, 'Mojave', "mojave", 'directImpact', 20, [wilderness]);
         const snakeskin = new Challenge(this, 'Snake Skin', "snake_skin", 'directImpact', 40, [wilderness]);
         const salamander = new Challenge(this, 'Salamander', "salamander", 'directImpact', 60, [wilderness]);
-        const splatter = new Challenge(this, 'splatter', "splatter", 'directImpact', 100, [wilderness]);
-        const zebra = new Challenge(this, 'zebra', "zebra", 'directImpact', 160, [wilderness]);
+        const splatter = new Challenge(this, 'Splatter', "splatter", 'directImpact', 100, [wilderness]);
+        const zebra = new Challenge(this, 'Zebra', "zebra", 'directImpact', 160, [wilderness]);
 
         const autumn = new Challenge(this, 'Autumn', "autumn", 'rapid', 5, [mojave]);
         const whiteout = new Challenge(this, 'Whiteout', "whiteout", 'noPrimary', 50, [snakeskin]);

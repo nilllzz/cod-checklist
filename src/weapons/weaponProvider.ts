@@ -92,8 +92,8 @@ export default class WeaponProvider {
             new OSA(),
             new MacTav45(),
             new TF141(),
-            new M1(),
             new SRavage(),
+            new M1(),
             new Hornet(),
 
             new EMC(),

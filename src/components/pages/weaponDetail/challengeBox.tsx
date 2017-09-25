@@ -3,7 +3,13 @@ import Challenge from "../../../weapons/challenge";
 import ProgressBar from "../../progress_bar";
 
 interface IChallengeBoxProps {
-    challenge: Challenge;
+    isActive: boolean;
+    isBeaten: boolean;
+    progress: number;
+    camo: string;
+    name: string;
+    challenge?: Challenge;
+    onClick: () => void;
 }
 
 export default class ChallengeBox extends React.Component<IChallengeBoxProps, any> {
@@ -15,15 +21,29 @@ export default class ChallengeBox extends React.Component<IChallengeBoxProps, an
     }
 
     private renderCamo() {
-        if (!this.props.challenge.isActive()) {
-            return (
-                <img src={'resources/img/ui/camo_locked.png'} />
-            )
+        if (this.props.isActive) {
+            if (this.props.isBeaten) {
+                return (
+                    <div className='challengebox-unlocked-camo'>
+                        <img src={'resources/img/camos/' + this.props.camo + '.png'} />
+                    </div>
+                );
+            }
+            else {
+                return (
+                    <div className='challengebox-locked-camo'>
+                        <img className='challengebox-blurred-camo' src={'resources/img/camos/' + this.props.camo + '.png'} />
+                        <img src={'resources/img/ui/camo_locked.png'} className='challengebox-locked-camo-overlay' />
+                    </div>
+                );
+            }
         }
         else {
             return (
-                <img src={'resources/img/camos/' + this.props.challenge.camoName + '.png'} />
-            );
+                <div className='challengebox-hidden-camo'>
+                    <img src={'resources/img/ui/camo_locked.png'} />
+                </div>
+            )
         }
     }
 
@@ -34,14 +54,14 @@ export default class ChallengeBox extends React.Component<IChallengeBoxProps, an
                     <div className='challengebox-header-coloredbox'>
                     </div>
                     <div className='challengebox-header-title'>
-                        <span>{this.props.challenge.challengeName.toUpperCase()}</span>
+                        <span>{this.props.name.toUpperCase()}</span>
                     </div>
                 </div>
-                <div className='challgenbox-camo'>
+                <div className='challengebox-camo' onClick={this.props.onClick}>
                     {this.renderCamo()}
                 </div>
                 <div className='challengebox-progress'>
-                    <ProgressBar value={this.props.challenge.getCompletion()} height={20} />
+                    <ProgressBar value={this.props.progress} height={20} />
                 </div>
             </div>
         );

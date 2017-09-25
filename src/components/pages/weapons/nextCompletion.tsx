@@ -17,7 +17,7 @@ export default class NextCompletion extends React.Component<any, INextCompletion
 
         const weapons: Weapon[] = [];
         User.getWeapons().slice(0).reverse().forEach(w => {
-            if (w.getCompletion() < 100) {
+            if (w.getCompletion() < 1) {
                 weapons.push(w);
             }
         });

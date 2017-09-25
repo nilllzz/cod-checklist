@@ -11,15 +11,15 @@ export default abstract class LightMachineGun extends Weapon {
         const arcticTech = new Challenge(this, 'Arctic Tech', 'arctic_tech', 'kills', 150, []);
         const wilderness = new Challenge(this, 'Wilderness', 'wilderness', 'kills', 200, []);
 
-        const mojave = new Challenge(this, 'Mojave', "mojave", 'hipshots', 20, [wilderness]);
-        const snakeskin = new Challenge(this, 'Snake Skin', "snake_skin", 'hipshots', 40, [wilderness]);
-        const salamander = new Challenge(this, 'Salamander', "salamander", 'hipshots', 60, [wilderness]);
-        const splatter = new Challenge(this, 'splatter', "splatter", 'hipshots', 100, [wilderness]);
-        const zebra = new Challenge(this, 'zebra', "zebra", 'hipshots', 160, [wilderness]);
+        const mojave = new Challenge(this, 'Mojave', "mojave", 'headshots', 20, [wilderness]);
+        const snakeskin = new Challenge(this, 'Snake Skin', "snake_skin", 'headshots', 40, [wilderness]);
+        const salamander = new Challenge(this, 'Salamander', "salamander", 'headshots', 60, [wilderness]);
+        const splatter = new Challenge(this, 'Splatter', "splatter", 'headshots', 100, [wilderness]);
+        const zebra = new Challenge(this, 'Zebra', "zebra", 'headshots', 160, [wilderness]);
 
-        const autumn = new Challenge(this, 'Autumn', "autumn", 'pointBlank', 25, [mojave]);
-        const whiteout = new Challenge(this, 'Whiteout', "whiteout", 'slide', 50, [snakeskin]);
-        const bengal = new Challenge(this, 'Bengal', "bengal", 'noAttachments', 50, [salamander]);
+        const autumn = new Challenge(this, 'Autumn', "autumn", 'hipshots', 10, [mojave]);
+        const whiteout = new Challenge(this, 'Whiteout', "whiteout", 'last15', 15, [snakeskin]);
+        const bengal = new Challenge(this, 'Bengal', "bengal", 'allAttachments', 50, [salamander]);
         const murderedOut = new Challenge(this, 'Murdered Out', "murdered_out", 'rapid', 20, [splatter]);
         const neonTiger = new Challenge(this, 'Neon Tiger', "neon_tiger", 'threeKills', 20, [zebra]);
 
