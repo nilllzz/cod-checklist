@@ -1,0 +1,108 @@
+
+.weaponfacts-content {
+    padding-top: 30px;
+    width: 100%;
+}
+
+.weaponfacts-content-main {
+    display: flex;
+    width: 100%;
+}
+
+.weaponfacts-facts {
+    width: 20%;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.weaponfacts-weapon {
+    width: 100%;
+    padding-top: 30px;
+}
+
+.weaponfacts-weapon img {
+    display: block;
+    margin: 0 auto;
+    max-height: 50%;
+    max-width: 80%;
+    filter: drop-shadow(0 0 12px rgb(20, 20, 20)); 
+    -webkit-box-reflect: below 20px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent) , to(rgba(250, 250, 250, 0.2)));
+}
+
+.weaponfacts-header {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(60, 60, 60);
+}
+
+.weaponfacts-name {
+    height: 60%;
+    width: 100%;
+    font-size: 32px;
+    color: rgb(220, 220, 220);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+.weaponfacts-firemodes {
+    display: flex;
+}
+
+.weaponfacts-firemode {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.weaponfacts-firemode span {
+    margin-left: 6px;
+}
+
+.weaponfacts-firemode img {
+    height: 24px;
+}
+
+.weaponfacts-header-manufacturer--img img {
+    height: 24px;
+    padding: 2px;
+}
+
+.weaponfacts-header-manufacturer--txt {
+    font-size: 16px;
+}
+
+.weaponfacts-class {
+    height: 40%;
+    background-color: rgb(54, 54, 54);
+    font-size: 16px;
+    color: rgb(200, 200, 200);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.weaponfacts-facts {
+    padding-top: 12px;
+}
+
+.weaponfacts-fact {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(20, 20, 20);
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.weaponfacts-fact-name {
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+}
+
+.weaponfacts-fact-value {
+    padding-left: 20px;
+}

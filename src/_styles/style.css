@@ -4,6 +4,10 @@
 @import url("totalCompletion.css");
 @import url("weaponBox.css");
 @import url("weapons.css");
+@import url("weaponclass.css");
+@import url("weapondetail.css");
+@import url("challengebox.css");
+@import url("weaponfacts.css");
 
 @font-face {
     font-family: "Electrolize";

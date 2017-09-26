@@ -1,0 +1,74 @@
+
+.challengebox-main {
+    background-color: rgb(60, 60, 60);
+    width: 140px;
+    height: 166px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.challengebox-header {
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    height: 24px;
+    display: flex;
+}
+
+.challengebox-header-coloredbox {
+    width: 4px;
+    height: 100%;
+    background-color: rgb(200, 200, 200);
+}
+
+.challengebox-header-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: rgb(200, 200, 200);
+    align-items: center;
+}
+
+.challengebox-locked-camo, .challengebox-unlocked-camo, .challengebox-hidden-camo  {
+    transition: 
+        filter .05s ease-in;
+    cursor: pointer;
+}
+
+.challengebox-locked-camo:hover, .challengebox-unlocked-camo:hover, .challengebox-hidden-camo:hover {
+    filter: drop-shadow(0 0 4px rgb(255, 202, 91));
+}
+
+.challengebox-locked-camo:active, .challengebox-unlocked-camo:active, .challengebox-hidden-camo:active {
+    filter: drop-shadow(0 0 4px rgb(255, 252, 6));
+}
+
+.challengebox-camo {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+
+.challengebox-locked-camo {
+    position: relative;
+}
+
+.challengebox-locked-camo .challengebox-locked-camo-overlay {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+}
+
+.challengebox-blurred-camo {
+    filter: blur(4px);
+}
+
+.challengebox-progress {
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+    height: 24px;
+    display: flex;
+    padding: 2px;
+}

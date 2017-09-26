@@ -117,7 +117,7 @@ export default class Challenge {
                 text = 'Destroy a scorestreak and kill an enemy in the same life * times';
                 break;
             case 'directImpact':
-                text = '';
+                text = 'Get * direct impact kills with this weapon';
                 break;
             case 'backStab':
                 text = 'Kill * enemies from behind';
