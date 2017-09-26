@@ -1,5 +1,4 @@
 require('babel-polyfill');
-//require('./src/polyfill.js');
 
 const express = require('express');
 const path = require('path');

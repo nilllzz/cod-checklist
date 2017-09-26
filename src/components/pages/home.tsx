@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Button } from "react-bootstrap";
 import IWButton from "../iw_button";
 import User from "../../user";
 import IWLogo from "../iw_logo";
