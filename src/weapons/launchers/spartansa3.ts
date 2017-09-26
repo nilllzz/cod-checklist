@@ -1,5 +1,5 @@
 import Challenge from "../challenge";
-import Weapon from "../weapon";
+import Weapon, { WeaponFact } from "../weapon";
 
 export default class SpartanSA3 extends Weapon {
 
@@ -10,6 +10,12 @@ export default class SpartanSA3 extends Weapon {
             'spartansa3.png',
             'Lock-on launcher. Primarily anti-air with an optical smart lock, but can be dumb fired.',
         );
+        
+        this.manufacturer = 'kb';
+
+        this.facts.push(new WeaponFact('Magazine Size', '1'));
+
+        this.fireModes.push(Weapon.FireMode.single);
 
         const desert = new Challenge(this, 'Desert', 'desert', 'scorestreakKills', 5, []);
         const mars = new Challenge(this, 'Mars', 'mars', 'scorestreakKills', 10, []);

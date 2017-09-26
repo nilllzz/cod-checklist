@@ -11,6 +11,8 @@ export default class MacTav45 extends Weapon {
             'Full-auto ballistic firearm. Popular with old Earth agencies for delivering high stopping power at range despite a low fire rate.',
         );
 
+        this.fireModes.push(Weapon.FireMode.fullauto);
+
         const desert = new Challenge(this, 'Desert', 'desert', 'kills', 50, []);
         const mars = new Challenge(this, 'Mars', 'mars', 'kills', 100, []);
         const arcticTech = new Challenge(this, 'Arctic Tech', 'arctic_tech', 'kills', 150, []);

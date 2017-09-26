@@ -17,12 +17,13 @@ export default class NextCompletion extends React.Component<any, INextCompletion
 
         const weapons: Weapon[] = [];
         User.getWeapons().slice(0).reverse().forEach(w => {
-            if (w.getCompletion() < 1) {
+            const completion = w.getCompletion();
+            if (completion < 1 && completion > 0) {
                 weapons.push(w);
             }
         });
         weapons.sort((w1, w2) => w1.getCompletion() - w2.getCompletion()).reverse();
-        while (weapons.length > 3)  {
+        while (weapons.length > 3) {
             weapons.pop();
         }
         this.state = {
@@ -31,24 +32,29 @@ export default class NextCompletion extends React.Component<any, INextCompletion
     }
 
     public render() {
-        return (
-            <div className='weapons-nextcompletion-main'>
+        if (this.state.weapons.length > 0) {
+            return (
+                <div className='weapons-nextcompletion-main'>
 
-                <div className='weapons-nextcompletion-text'>
-                    <span>Weapons closest to completion</span>
-                </div>
+                    <div className='weapons-nextcompletion-text'>
+                        <span>Weapons closest to completion</span>
+                    </div>
 
-                <div className='weapons-nextcompletion-weapons'>
-                    {
-                        this.state.weapons.map(w => {
-                            return (
-                                <WeaponBox weapon={w} key={w.name} />
-                            );
-                        })
-                    }
+                    <div className='weapons-nextcompletion-weapons'>
+                        {
+                            this.state.weapons.map(w => {
+                                return (
+                                    <WeaponBox weapon={w} key={w.name} />
+                                );
+                            })
+                        }
+                    </div>
                 </div>
-            </div>
-        );
+            );
+        }
+        else {
+            return (<div></div>);
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-import Weapon from "../weapon";
+import Weapon, { WeaponFact } from "../weapon";
 import Handgun from "./handgun";
 
 export default class Stallion44 extends Handgun {
@@ -11,6 +11,9 @@ export default class Stallion44 extends Handgun {
         );
 
         this.diamondRequirement = false;
+        this.facts.push(new WeaponFact('Magazine Size', '6'));
+
+        this.fireModes.push(Weapon.FireMode.single);
     }
 
 

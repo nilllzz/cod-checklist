@@ -87,4 +87,15 @@ export default abstract class Weapon {
             this.name.replace(' ', '').toLowerCase();
     }
 
+    public getHighestChallengeValue(valueName: string): number {
+        let highest = 0;
+        for (var i = 0; i < this.challenges.length; i++) {
+            var challenge = this.challenges[i];
+            if (challenge.valueName === valueName && challenge.targetValue > highest) {
+                highest = challenge.targetValue;
+            }
+        }
+        return highest;
+    }
+
 }

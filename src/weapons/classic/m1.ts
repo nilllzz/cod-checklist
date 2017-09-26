@@ -11,6 +11,8 @@ export default class M1 extends Weapon {
             'Semi-auto ballistic rifle. An old, reliable service rifle with moderate stopping power and low recoil. The top-loading clip must be exhausted to reload.',
         );
 
+        this.fireModes.push(Weapon.FireMode.semiauto);
+
         const desert = new Challenge(this, 'Desert', 'desert', 'kills', 50, []);
         const mars = new Challenge(this, 'Mars', 'mars', 'kills', 100, []);
         const arcticTech = new Challenge(this, 'Arctic Tech', 'arctic_tech', 'kills', 150, []);

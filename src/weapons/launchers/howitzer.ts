@@ -1,5 +1,5 @@
 import Challenge from "../challenge";
-import Weapon from "../weapon";
+import Weapon, { WeaponFact } from "../weapon";
 
 export default class Howitzer extends Weapon {
 
@@ -10,6 +10,12 @@ export default class Howitzer extends Weapon {
             'howitzer.png',
             'Grenade launcher. Launches quick, deadly projectiles that explode on impact.',
         );
+        
+        this.manufacturer = 'kb';
+
+        this.facts.push(new WeaponFact('Magazine Size', '3'));
+
+        this.fireModes.push(Weapon.FireMode.pumpaction);
 
         const desert = new Challenge(this, 'Desert', 'desert', 'kills', 50, []);
         const mars = new Challenge(this, 'Mars', 'mars', 'kills', 100, []);

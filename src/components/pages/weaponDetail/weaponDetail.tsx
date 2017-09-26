@@ -7,6 +7,7 @@ import ChallengeBox from "./challengeBox";
 import ArrowBack from "../../arrowBack";
 import { Link } from "react-router-dom";
 import Challenge from "../../../weapons/challenge";
+import IWButton from "../../iw_button";
 
 interface IWeaponDetailsPageState {
     selectedChallenge: Challenge;
@@ -41,6 +42,7 @@ export default class WeaponDetailPage extends React.Component<any, IWeaponDetail
         this.selectChallenge = this.selectChallenge.bind(this);
         this.renderSelectedChallengeRequirements = this.renderSelectedChallengeRequirements.bind(this);
         this.onChange_selectedChallengeValue = this.onChange_selectedChallengeValue.bind(this);
+        this.onClick_completeAll = this.onClick_completeAll.bind(this);
     }
 
     private selectChallenge(challenge: Challenge): void {
@@ -58,14 +60,27 @@ export default class WeaponDetailPage extends React.Component<any, IWeaponDetail
             value = '0';
             isEmpty = true;
         }
-        const num = parseInt(value);
+        let num = parseInt(value);
+        const highest = this.state.selectedChallenge.weapon.getHighestChallengeValue(this.state.selectedChallenge.valueName);
+        if (num > highest) {
+            num = highest;
+        }
         if (!isNaN(num)) {
             this.state.selectedChallenge.setCurrentValue(num);
             this.setState({
-                selectedChallenge: this.state.selectedChallenge,
                 selectedChallengeValue: isEmpty ? '' : this.state.selectedChallenge.getCurrentValue().toString()
             });
         }
+    }
+
+    private onClick_completeAll() {
+        for (var i = 0; i < this.weapon.challenges.length; i++) {
+            var challenge = this.weapon.challenges[i];
+            challenge.setCurrentValue(challenge.targetValue);
+        }
+        this.setState({
+            selectedChallenge: undefined
+        });
     }
 
     private renderSelectedChallengeRequirements() {
@@ -102,9 +117,9 @@ export default class WeaponDetailPage extends React.Component<any, IWeaponDetail
                 <div className='weapondetail-selectedchallenge'>
                     <div className='weapondetail-selectedchallenge-camo'>
                         {
-                            this.state.selectedChallenge.isActive() ? 
-                            <img src={'resources/img/camos/' + this.state.selectedChallenge.camoName + '.png'} /> : 
-                            <img src={'resources/img/ui/camo_locked.png'} />
+                            this.state.selectedChallenge.isActive() ?
+                                <img src={'resources/img/camos/' + this.state.selectedChallenge.camoName + '.png'} /> :
+                                <img src={'resources/img/ui/camo_locked.png'} />
                         }
                     </div>
                     <div className='weapondetail-selectedchallenge-details'>
@@ -148,6 +163,13 @@ export default class WeaponDetailPage extends React.Component<any, IWeaponDetail
                         <div className='weapondetail-header'>
                             <div className='weapondetail-name'>
                                 <span>{this.weapon.name}</span>
+                                {
+                                    this.weapon.getCompletion() < 1 ?
+                                        <div className='weapondetail-completeall'>
+                                            <IWButton text='Complete all challenges for this gun' width={260} onClick={this.onClick_completeAll} />
+                                        </div> : 
+                                        <div></div>
+                                }
                             </div>
                             <div className='weapondetail-class'>
                                 <span>{this.weapon.weaponClass}</span>

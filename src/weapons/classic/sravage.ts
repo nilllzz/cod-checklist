@@ -11,6 +11,8 @@ export default class SRavage extends Weapon {
             'Pump-action ballistic shotgun. An esteemed and rugged firearm that trades a slow rechamber rate for incredible range and stopping power.',
         );
 
+        this.fireModes.push(Weapon.FireMode.pumpaction);
+
         const desert = new Challenge(this, 'Desert', 'desert', 'kills', 50, []);
         const mars = new Challenge(this, 'Mars', 'mars', 'kills', 100, []);
         const arcticTech = new Challenge(this, 'Arctic Tech', 'arctic_tech', 'kills', 150, []);

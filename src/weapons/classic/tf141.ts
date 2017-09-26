@@ -11,6 +11,8 @@ export default class TF141 extends Weapon {
             'Bolt-action ballistic rifle. Renowned for superior stability, handling, and unforgiving recoil.',
         );
 
+        this.fireModes.push(Weapon.FireMode.boltaction);
+
         const desert = new Challenge(this, 'Desert', 'desert', 'kills', 50, []);
         const mars = new Challenge(this, 'Mars', 'mars', 'kills', 100, []);
         const arcticTech = new Challenge(this, 'Arctic Tech', 'arctic_tech', 'kills', 150, []);

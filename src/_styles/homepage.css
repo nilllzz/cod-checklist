@@ -1,6 +1,10 @@
 
 .homepage-content {
     padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 95%;
 }
 
 .homepage-content-text {
@@ -9,4 +13,13 @@
 
 .homepage-content-options {
     padding-top: 30px;
+}
+
+.homepage-content-disclaimer {
+    font-size: 12px;
+}
+
+.homepage-content-disclaimer span a {
+    color: rgb(20, 20, 20);
+    font-weight: bold;
 }

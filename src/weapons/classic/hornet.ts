@@ -11,6 +11,8 @@ export default class Hornet extends Weapon {
             'Full-auto ballistic pistol. Delivers the highest fire rate and recoil across all weapon classes.',
         );
 
+        this.fireModes.push(Weapon.FireMode.fullauto);
+
         const desert = new Challenge(this, 'Desert', 'desert', 'kills', 50, []);
         const mars = new Challenge(this, 'Mars', 'mars', 'kills', 100, []);
         const arcticTech = new Challenge(this, 'Arctic Tech', 'arctic_tech', 'kills', 150, []);

@@ -1,5 +1,5 @@
 import Challenge from "../challenge";
-import Weapon from "../weapon";
+import Weapon, { WeaponFact } from "../weapon";
 
 export default class CombatKnife extends Weapon {
 
@@ -10,6 +10,8 @@ export default class CombatKnife extends Weapon {
             'combatknife.png',
             'CQC tactical knife. Standard military issue, employed for fast, quiet, and deadly wetwork.',
         );
+
+        this.facts.push(new WeaponFact('Used by', 'Nick Reyes'));
 
         const desert = new Challenge(this, 'Desert', 'desert', 'kills', 25, []);
         const mars = new Challenge(this, 'Mars', 'mars', 'kills', 50, []);
