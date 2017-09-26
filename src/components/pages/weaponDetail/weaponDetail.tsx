@@ -166,7 +166,7 @@ export default class WeaponDetailPage extends React.Component<any, IWeaponDetail
                                 {
                                     this.weapon.getCompletion() < 1 ?
                                         <div className='weapondetail-completeall'>
-                                            <IWButton text='Complete all challenges for this gun' width={260} onClick={this.onClick_completeAll} />
+                                            <IWButton text='Complete all challenges for this weapon' width={274} onClick={this.onClick_completeAll} />
                                         </div> : 
                                         <div></div>
                                 }
