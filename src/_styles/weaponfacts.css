@@ -23,7 +23,9 @@
 }
 
 .weaponfacts-weapon img {
-    width: 90%;
+    max-width: 90%;
+    max-height: 400px;
+    display: block;
     filter: drop-shadow(0 0 12px rgb(20, 20, 20)); 
     -webkit-box-reflect: below 20px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent) , to(rgba(250, 250, 250, 0.2)));
 }
