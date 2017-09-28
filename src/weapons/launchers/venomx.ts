@@ -11,6 +11,8 @@ export default class VenomX extends Weapon {
             'Experimental projectile launcher with two modes. Can fire a long range projectile that sticks on impact or quickly shoot shorter range projectiles with lower damage.',
         );
         
+        this.diamondRequirement = false;
+        
         this.fireModes.push(Weapon.FireMode.semiauto);
 
         const desert = new Challenge(this, 'Desert', 'desert', 'kills', 50, []);

@@ -10,6 +10,8 @@ export default class Nunchucks extends Melee {
             'nunchucks.png',
             'Pulverize enemies with this melee weapon that acquires targets in a wider range.',
         );
+        
+        this.diamondRequirement = false;
     }
 
 }

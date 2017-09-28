@@ -10,6 +10,8 @@ export default class Katana extends Melee {
             'katana.png',
             'Slice and dice opponents at an extended range.',
         );
+        
+        this.diamondRequirement = false;
     }
 
 }
