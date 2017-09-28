@@ -47,6 +47,9 @@ import PLAW from "./launchers/plaw";
 import Howitzer from "./launchers/howitzer";
 import CombatKnife from "./melee/combatknife";
 import Weapon from "./weapon";
+import Katana from "./melee/katana";
+import Nunchucks from "./melee/nunchucks";
+import VenomX from "./launchers/venomx";
 
 export default class WeaponProvider {
 
@@ -106,8 +109,11 @@ export default class WeaponProvider {
             new SpartanSA3(),
             new PLAW(),
             new Howitzer(),
+            new VenomX(),
 
             new CombatKnife(),
+            new Katana(),
+            new Nunchucks(),
         ];
     }
 

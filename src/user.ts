@@ -93,24 +93,28 @@ export default class User {
             threePerMatch: 0,
             streakAndEnemy: 0,
         };
-        data['Howitzer'] = {
-            kills: 0,
-            directImpact: 0,
-            rapid: 0,
-            noPrimary: 0,
-            scorestreakKills: 0,
-            longshots: 0,
-            threeKills: 0,
-        };
-        data['Combat Knife'] = {
-            kills: 0,
-            backStab: 0,
-            frontKills: 0,
-            noPrimary: 0,
-            slide: 0,
-            rapid: 0,
-            threeKills: 0,
-        };
+        ['Howitzer', 'Venom-X'].forEach(weapon => {
+            data[weapon] = {
+                kills: 0,
+                directImpact: 0,
+                rapid: 0,
+                noPrimary: 0,
+                scorestreakKills: 0,
+                longshots: 0,
+                threeKills: 0,
+            };
+        });
+        ['Combat Knife', 'Katana', 'Nunchucks'].forEach(weapon => {
+            data[weapon] = {
+                kills: 0,
+                backStab: 0,
+                frontKills: 0,
+                noPrimary: 0,
+                slide: 0,
+                rapid: 0,
+                threeKills: 0,
+            };
+        });
 
         return data;
     }
