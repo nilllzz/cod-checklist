@@ -1,0 +1,17 @@
+
+.weapons-main {
+    margin: 50px;
+}
+
+.weapons-title {
+    font-family: 'Arvo';
+    color: rgb(180, 156, 108);
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.weapons-temp-text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}

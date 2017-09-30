@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import WeaponsPage from "./pages/weapons/weapons";
+import WeaponsPage from "./components/pages/weapons/weapons";
 
 export default class PageRouter extends React.Component<any, any> {
 
