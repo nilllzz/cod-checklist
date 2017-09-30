@@ -1,3 +1,7 @@
+/pages/iw/node_modules
+/pages/ww2/node_modules
+/pages/index/node_modules
 /node_modules
-*.min.css
-public/bundle.js
+style.min.css
+*/public/bundle.js
+*/public/bundle.js

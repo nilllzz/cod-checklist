@@ -1,4 +1,9 @@
 
+@font-face {
+    font-family: "Electrolize";
+    src: url(../fonts/cod.woff2) format("truetype");
+}
+
 .homepage-overlay-main {
     position: absolute;
     width: 100%;

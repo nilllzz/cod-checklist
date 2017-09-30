@@ -9,11 +9,6 @@
 @import url("challengebox.css");
 @import url("weaponfacts.css");
 
-@font-face {
-    font-family: "Electrolize";
-    src: url(/fonts/cod.woff2) format("truetype");
-}
-
 html {
     background-color: rgb(127, 127, 127);
 }

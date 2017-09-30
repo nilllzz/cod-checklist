@@ -30,7 +30,7 @@ export default class PageRouter extends React.Component<any, any> {
     public render() {
         if (this.state.loaded) {
             return (
-                <BrowserRouter>
+                <BrowserRouter basename='iw'>
                     <div>
                         <Switch>
                             <Route path='/'>
