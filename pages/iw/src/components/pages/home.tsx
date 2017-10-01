@@ -2,6 +2,7 @@ import * as React from "react";
 import IWButton from "../iw_button";
 import User from "../../user";
 import IWLogo from "../iw_logo";
+import { Link } from "react-router-dom";
 const saveAs = require('save-as').default;
 
 interface IHomePageProps {
@@ -97,6 +98,10 @@ export default class HomePage extends React.Component<IHomePageProps, IHomePageS
         this.props.onLoadedChanged(User.isLoaded);
     }
 
+    private onClick_Homepage() {
+        document.location.href = '/';
+    }
+
     private renderOverlay() {
         if (this.state.isNewConfirmOpen) {
             return (
@@ -161,6 +166,7 @@ export default class HomePage extends React.Component<IHomePageProps, IHomePageS
                                     <div></div>
                             }
                             <IWButton text='New' onClick={this.onClick_New} />
+                            <IWButton text='Homepage' onClick={this.onClick_Homepage} />
                         </div>
                     </div>
                     <div className='homepage-content--down'>

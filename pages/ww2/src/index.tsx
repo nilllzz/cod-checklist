@@ -7,4 +7,7 @@ render(
     document.getElementById('container')
 );
 
-var fire = require('./fire.js');
+const fireToggle = localStorage.getItem('ww2-config-fire');
+if (fireToggle === null || JSON.parse(fireToggle)) {
+    var fire = require('./fire.js');
+}

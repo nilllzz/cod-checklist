@@ -1,5 +1,6 @@
 import * as React from "react";
 import WW2Button from "../../ww2-button";
+import PageHeader from "../../header";
 
 export default class WeaponsPage extends React.Component<any, any> {
 
@@ -10,6 +11,8 @@ export default class WeaponsPage extends React.Component<any, any> {
     public render() {
         return (
             <div className='weapons-main'>
+                <PageHeader />
+
                 <div className='weapons-title'>
                     <span>Call of Duty WW2 - Checklist</span>
                 </div>

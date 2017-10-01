@@ -1,0 +1,32 @@
+
+.header-main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header-main img {
+    max-height: 50px;
+}
+
+.header-fire-toggle {
+    opacity: 0.5;
+    font-size: 16px;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    transition:
+        font-size 0.2s ease-in,
+        opacity 0.2s ease-in;
+}
+
+.header-fire-toggle:hover {
+    font-size: 20px;
+    opacity: 1;
+}
+
+.header-fire-toggle:active {
+    color: white !important;
+}
