@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "cd pages/index && npm run build && npm run css && cd ../iw && npm run build && npm run css && cd ../ww2 && npm run build && npm run css"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/nilllzz/iw-checklist.git"

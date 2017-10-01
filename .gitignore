@@ -6,6 +6,6 @@ style.min.css
 pages/iw/public/bundle.js
 pages/ww2/public/bundle.js
 pages/index/public/bundle.js
-pages/iw/public/bundle.map.js
-pages/ww2/public/bundle.map.js
-pages/index/public/bundle.map.js
+pages/index/public/bundle.js.map
+pages/iw/public/bundle.js.map
+pages/ww2/public/bundle.js.map
