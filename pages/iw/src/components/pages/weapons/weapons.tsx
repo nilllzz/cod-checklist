@@ -83,31 +83,27 @@ export default class WeaponsPage extends React.Component<any, any> {
                     </div>
 
                     <div className='weapons-content-main'>
-                        <div className='weapons-content-main--left'>
-                            <WeaponClassSelection />
-                            <div className='weapons-content-masterchallenges'>
-                                <div className='weapons-class-selection-text'>
-                                    <span>Master Challenge Progress</span>
-                                </div>
-                                <ChallengeBox key={'Solar'}
-                                    camo={'solar'}
-                                    isActive={true}
-                                    isBeaten={solarProgress == 1}
-                                    name={'Solar'}
-                                    progress={solarProgress}
-                                    onClick={() => { }} />
-                                <ChallengeBox key={'BlackSky'}
-                                    camo={'black_sky'}
-                                    isActive={true}
-                                    isBeaten={blackSkyProgress == 1}
-                                    name={'Black Sky'}
-                                    progress={blackSkyProgress}
-                                    onClick={() => { }} />
+                        <WeaponClassSelection />
+                        <div className='weapons-content-masterchallenges'>
+                            <div className='weapons-class-selection-text'>
+                                <span>Master Challenge Progress</span>
                             </div>
+                            <ChallengeBox key={'Solar'}
+                                camo={'solar'}
+                                isActive={true}
+                                isBeaten={solarProgress == 1}
+                                name={'Solar'}
+                                progress={solarProgress}
+                                onClick={() => { }} />
+                            <ChallengeBox key={'BlackSky'}
+                                camo={'black_sky'}
+                                isActive={true}
+                                isBeaten={blackSkyProgress == 1}
+                                name={'Black Sky'}
+                                progress={blackSkyProgress}
+                                onClick={() => { }} />
                         </div>
-                        <div className='weapons-content-main--right'>
-                            <NextCompletion />
-                        </div>
+                        <NextCompletion />
                     </div>
                 </div>
             </div>

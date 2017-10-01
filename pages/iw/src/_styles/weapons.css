@@ -1,7 +1,8 @@
 
 .weapons-content-main {
     display: flex;
-    padding-top: 18px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .weapons-content-overallcompletion {
@@ -9,19 +10,12 @@
     max-width: 500px;
 }
 
-.weapons-content-main--left {
-    width: 500px;
-    display: flex;
-}
-
-.weapons-content-main--right {
-    margin-left: 60px;
-}
-
-.weapons-class-selection-options {
-    width: 0%;
+.weapons-class-selection-main {
+    margin-top: 12px;
+    margin-right: 40px;
 }
 
 .weapons-content-masterchallenges {
-    margin-left: 60px;
+    margin-right: 40px;
+    margin-top: 12px;
 }
